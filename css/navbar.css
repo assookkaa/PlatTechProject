@@ -1,0 +1,20 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand img {
+    max-height: 40px;
+    margin-right: 10px;
+}
+.nav-link {
+    font-size: 1.1rem;
+}
+.navbar-toggler {
+    border: none;
+}
+.btn-primary, .btn-danger {
+    font-size: 1.1rem;
+    margin-left: 10px;
+}

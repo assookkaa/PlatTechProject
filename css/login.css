@@ -1,0 +1,46 @@
+body {
+    background-color: #f0f7fa; /* Soft blue */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif; /* Change the font for better readability */
+  }
+  
+  .container-fluid {
+    flex-grow: 1;
+  }
+  
+  .about-box {
+    background: #f5f9fc; /* Softer blue */
+    color: #4a4a4a; /* Dark gray */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 10px;
+    padding: 30px; /* Adjusted padding */
+  }
+  
+  .login-box {
+    background: #ffffff; /* White */
+    padding: 40px !important; /* Increased padding */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    font-size: 28px; /* Slightly reduced font size */
+    margin-bottom: 30px; /* Added some space below the heading */
+    color: #333333; /* Darker gray */
+  }
+  
+  .footer {
+    background: #343a40; /* Dark gray */
+    color: #ffffff; /* White */
+    padding: 20px 0; /* Increased padding */
+    text-align: center;
+  }
+  
+  .custom-header {
+    background-color: #82b1ff; /* Lighter blue */
+    padding: 20px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 30px; /* Added some*/
+  }

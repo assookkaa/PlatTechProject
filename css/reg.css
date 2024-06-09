@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f7fa; /* Soft blue */
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #ffffff; /* White */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Set a fixed width for the form */
+}
+
+.header {
+    background-color: #82b1ff; /* Lighter blue */
+    color: #ffffff; /* White */
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px; /* Add some space below the header */
+}
+.header .logo {
+    max-width: 100px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space between logo and text */
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.half-width {
+    width: calc(50% - 5px); /* Set width for half of the form */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Add some space between inputs */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue */
+    color: #ffffff; /* White */
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+a {
+    color: #007bff; /* Blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .half-width {
+        width: 100%; /* Set full width for smaller screens */
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.next-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue */
+    color: #ffffff; /* White */
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.back-button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue */
+    color: #ffffff; /* White */
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.footer {
+    background: #343a40; /* Dark gray */
+    color: #ffffff; /* White */
+    padding: 20px 0; /* Increased padding */
+    text-align: center;
+  }

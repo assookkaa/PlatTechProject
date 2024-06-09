@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f7fa; /* Soft blue */
+    margin: 0;
+}
+
+.header .logo {
+    max-width: 100px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space between logo and text */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.services .card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.services .card-body {
+    text-align: left;
+}
+
+.footer a {
+    color: #82b1ff; /* Light blue for links in the footer */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        text-align: center;
+    }
+
+    .services .card img {
+        max-height: 150px;
+    }
+}
+
+/* About Us section with image and text side by side */
+.about img {
+    max-width: 100%;
+    opacity: 0.8; /* Adjust opacity as needed */
+}
+
+.about-text {
+    /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about .text-white {
+    color: #343a40; /* Dark gray text */
+}
+.bg{
+    background-color: rgba(209, 209, 209, 0.9);
+}
