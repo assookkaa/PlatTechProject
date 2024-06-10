@@ -1,6 +1,8 @@
 <?php
-require_once 'autoload.php';
-require_once 'dbcon.php';
+require_once '../../toothfairy/autoload.php';
+require_once '../../toothfairy/dbcon.php';
+// require_once 'autoload.php';
+// require_once 'dbcon.php';
 
 class ProfileCntrl extends Profile
 {
@@ -28,11 +30,9 @@ class ProfileCntrl extends Profile
         $this->roles = $roles;
     }
 
-    public function viewProfile($userId)
-    {
-        return $this->getUser($this->userId);
-        $this->fname;
+   
+    public function viewAllProfile(){
+        return $this->getAllUser(1);
     }
-
     
 }

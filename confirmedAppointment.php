@@ -34,8 +34,8 @@
             throw new Exception('Invalid CSRF token.');
         }
         $appointmentCntrl = new AppointmentCntrl($con, $userId, null, null, null, null); // Create the controller object
-        $appointments = $appointmentCntrl->viewAppointment($userId, $status, $limit, $offset); // Fetch appointments for the logged-in user
-        $totalAppointments = count($appointmentCntrl->viewAppointment($userId, PHP_INT_MAX, 0)); // Get the total number of appointments
+        $appointments = $appointmentCntrl->viewConfirmedAppointment(); // Fetch appointments for the logged-in user
+        // $totalAppointments = count($appointmentCntrl->viewAppointment($userId, PHP_INT_MAX, 0)); // Get the total number of appointments
 
         if (empty($appointments)) { ?>
             <div class="container">
@@ -73,19 +73,7 @@
                                         <p><strong>Status:</strong> <?php echo $appointment['status'] ?></p>
                                     </div>
                                 <?php } ?>
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-center">
-                                        <?php if ($page > 1) { ?>
-                                            <li class="page-item"><a class="page-link" href="?page=<?php echo $page - 1; ?>">Previous</a></li>
-                                        <?php } ?>
-                                        <?php for ($i = 1; $i <= ceil($totalAppointments / $limit); $i++) { ?>
-                                            <li class="page-item <?php if ($i == $page) echo 'active'; ?>"><a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
-                                        <?php } ?>
-                                        <?php if ($page * $limit < $totalAppointments) { ?>
-                                            <li class="page-item"><a class="page-link" href="?page=<?php echo $page + 1; ?>">Next</a></li>
-                                        <?php } ?>
-                                    </ul>
-                                </nav>
+                                
                             </div>
                         </div>
                     </div>

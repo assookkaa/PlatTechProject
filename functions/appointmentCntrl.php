@@ -1,6 +1,7 @@
 <?php
+
 require_once 'autoload.php';
-include 'dbcon.php';
+require_once 'dbcon.php';
 Class AppointmentCntrl extends Appointment{
 
     private $userId; 
@@ -29,6 +30,11 @@ public function viewAppointment($userId, $status = 'Pending', $limit = 3, $offse
 {
     return $this->getAppointment($userId, $status, $limit, $offset);
 }
+
+public function viewConfirmedAppointment(){
+    return $this->getConfirmed($this->userId = $_SESSION['user_id'], $this->status = "Confirmed");
+}
+
 }
 
 ?>

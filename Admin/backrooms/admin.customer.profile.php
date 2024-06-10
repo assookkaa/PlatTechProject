@@ -1,7 +1,8 @@
 <?php 
-
-require_once 'autoload.php';
-require_once 'dbcon.php';
+require_once '../../toothfairy/autoload.php';
+require_once '../../toothfairy/dbcon.php';
+// require_once 'autoload.php';
+// require_once 'dbcon.php';
 
 abstract Class Profile{
     
@@ -13,12 +14,13 @@ abstract Class Profile{
         
     }
 
-    protected function getUser($userId) {
-        $query= "SELECT * FROM user WHERE user_id = ?";
-        $stm = $this->con->prepare($query);
-        $stm->bind_param('i', $userId);
 
-        if ($stm->execute()) {
+    protected function getAllUser($accId){
+         $query= "SELECT * FROM user INNER JOIN acc_level ON user.acc_id = acc_level.acc_id WHERE user.acc_id = ? ";
+         $stm = $this->con->prepare($query);
+         $stm->bind_param('i', $accId);
+
+         if ($stm->execute()){
             $result = $stm->get_result();
             if ($result->num_rows > 0) {
                 return $result->fetch_all(MYSQLI_ASSOC);
@@ -28,10 +30,8 @@ abstract Class Profile{
         } else {
             throw new Exception("Error retrieving appointment: " . $stm->error);
         }
+         }
 
-    }
-
-    
 }
 
 ?>

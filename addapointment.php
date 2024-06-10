@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $age = $_POST['age'];
         $date = $_POST['date'];
         $purpose = $_POST['purpose'];
-        $status = "Pending"; // Default status
+        $status = $_POST['status']; // Default status
 
         try {
             $appointment = new AppointmentCntrl($con, $userId, $age, $date, $purpose, $status); // Pass $con to the constructor
@@ -81,6 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="purpose">Purpose:</label>
                         <textarea class="form-control purpose-textarea" id="purpose" name="purpose" rows="3" required></textarea>
                     </div>
+                    <input type="hidden" name="status" value="Pending">
                     <button type="submit" name="POST" class="btn btn-primary">Submit</button>
                 </form>
             </div>
